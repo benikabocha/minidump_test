@@ -41,7 +41,7 @@ int GenerateDump(EXCEPTION_POINTERS* expPtr) {
 
 int main() {
     __try {
-        int* badPtr = NULL;
+        double* badPtr = NULL;
         *badPtr = 0;
     } __except (GenerateDump(GetExceptionInformation())) {
     }
